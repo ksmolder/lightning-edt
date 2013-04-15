@@ -1,0 +1,3 @@
+content  calendar    elementary  chrome/content/calendar/
+
+override chrome://calendar/content/calendar-views.js chrome/content/calendar/calendar-views.js
