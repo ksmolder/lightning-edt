@@ -474,7 +474,6 @@ function updateStyleSheetForViews(aCalendar) {
         // Events in multiweek/ month view
         let ruleString2 = 'calendar-month-day-box-item:not([allday="true"]) .calendar-color-box[calendar-id="' + aCalendar.id + '"] {} ';
         let ruleIndex2 = sheet.insertRule(ruleString2, sheet.cssRules.length);
-        // Events in day/ week view
         
         ruleCache[aCalendar.id] = aCalendar.id;
 
@@ -483,6 +482,7 @@ function updateStyleSheetForViews(aCalendar) {
         sheet.cssRules[ruleIndex1].style.backgroundColor = color;
         sheet.cssRules[ruleIndex1].style.color = contrastColor;
         sheet.cssRules[ruleIndex2].style.backgroundColor =  "transparent";
+        sheet.cssRules[ruleIndex2].style.borderColor = "transparent";
         sheet.cssRules[ruleIndex2].style.color = color;
     }
 }
